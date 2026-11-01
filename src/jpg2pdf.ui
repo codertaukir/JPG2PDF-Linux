@@ -1,0 +1,1238 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1270</width>
+    <height>714</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="0">
+     <widget class="QSplitter" name="splitter_2">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="cursor">
+       <cursorShape>ArrowCursor</cursorShape>
+      </property>
+      <property name="lineWidth">
+       <number>1</number>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+      <widget class="QWidget" name="verticalLayoutWidget_3">
+       <layout class="QVBoxLayout" name="verticalLayout_10">
+        <item>
+         <widget class="QTableWidget" name="tableWidget">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>11</pointsize>
+           </font>
+          </property>
+          <property name="toolTip">
+           <string>Double-click an image to tick it. Drag images to change their order, or right-click for more options.</string>
+          </property>
+          <property name="selectionBehavior">
+           <enum>QAbstractItemView::SelectRows</enum>
+          </property>
+          <property name="gridStyle">
+           <enum>Qt::SolidLine</enum>
+          </property>
+          <property name="sortingEnabled">
+           <bool>false</bool>
+          </property>
+          <property name="rowCount">
+           <number>16</number>
+          </property>
+          <property name="columnCount">
+           <number>7</number>
+          </property>
+          <attribute name="horizontalHeaderCascadingSectionResizes">
+           <bool>true</bool>
+          </attribute>
+          <attribute name="horizontalHeaderMinimumSectionSize">
+           <number>25</number>
+          </attribute>
+          <attribute name="horizontalHeaderDefaultSectionSize">
+           <number>100</number>
+          </attribute>
+          <attribute name="horizontalHeaderStretchLastSection">
+           <bool>true</bool>
+          </attribute>
+          <attribute name="verticalHeaderDefaultSectionSize">
+           <number>45</number>
+          </attribute>
+          <row/>
+          <row/>
+          <row/>
+          <row/>
+          <row/>
+          <row/>
+          <row/>
+          <row/>
+          <row/>
+          <row/>
+          <row/>
+          <row/>
+          <row/>
+          <row/>
+          <row/>
+          <row/>
+          <column/>
+          <column/>
+          <column/>
+          <column/>
+          <column/>
+          <column/>
+          <column/>
+         </widget>
+        </item>
+        <item>
+         <widget class="QGroupBox" name="groupBox_4">
+          <property name="title">
+           <string>IMAGE LIST</string>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_13">
+           <item>
+            <layout class="QGridLayout" name="gridLayout_25">
+             <item row="3" column="7">
+              <widget class="QPushButton" name="stop">
+<property name="toolTip">
+ <string>Stop creating the PDF</string>
+</property>
+               <property name="text">
+                <string>Stop</string>
+               </property>
+               <property name="icon">
+                <iconset resource="resource.qrc">
+                 <normaloff>:/myresource/resource/icons8-stop-96.png</normaloff>:/myresource/resource/icons8-stop-96.png</iconset>
+               </property>
+               <property name="iconSize">
+                <size>
+                 <width>22</width>
+                 <height>22</height>
+                </size>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="4" colspan="3">
+              <widget class="QPushButton" name="show_full_path">
+<property name="toolTip">
+ <string>Show or hide the folder of each image</string>
+</property>
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="text">
+                <string>Show file location</string>
+               </property>
+               <property name="icon">
+                <iconset resource="resource.qrc">
+                 <normaloff>:/myresource/resource/icons8-file-preview-96.png</normaloff>:/myresource/resource/icons8-file-preview-96.png</iconset>
+               </property>
+               <property name="iconSize">
+                <size>
+                 <width>19</width>
+                 <height>19</height>
+                </size>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="0" colspan="4">
+              <widget class="QComboBox" name="selectall">
+<property name="toolTip">
+ <string>Tick or untick all images</string>
+</property>
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <item>
+                <property name="text">
+                 <string>Tick images</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>Tick all</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>Untick all</string>
+                </property>
+               </item>
+              </widget>
+             </item>
+             <item row="3" column="8" colspan="2">
+              <widget class="QPushButton" name="start_convert">
+<property name="toolTip"><string>Make a PDF from the ticked images. If no image is ticked, all images are used.</string></property>
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="text">
+                <string>Create PDF</string>
+               </property>
+               <property name="icon">
+                <iconset resource="resource.qrc">
+                 <normaloff>:/myresource/resource/icons8-play-100.png</normaloff>:/myresource/resource/icons8-play-100.png</iconset>
+               </property>
+               <property name="iconSize">
+                <size>
+                 <width>22</width>
+                 <height>22</height>
+                </size>
+               </property>
+              </widget>
+             </item>
+             <item row="3" column="1" colspan="6">
+              <widget class="QProgressBar" name="progress_bar">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QProgressBar{
+height: 28px;
+}</string>
+               </property>
+               <property name="value">
+                <number>24</number>
+               </property>
+              </widget>
+             </item>
+             <item row="3" column="0">
+              <widget class="QLabel" name="image_label">
+               <property name="text">
+                <string>Image 0 of 0</string>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="7">
+              <widget class="QPushButton" name="moveup">
+<property name="toolTip"><string>Move the highlighted images up. Click an image, or Ctrl/Shift-click several. Tip: you can also drag images, or right-click for more options.</string></property>
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QToolButton{
+
+border: none;
+}</string>
+               </property>
+               <property name="text">
+                <string>Move up</string>
+               </property>
+               <property name="icon">
+                <iconset resource="resource.qrc">
+                 <normaloff>:/myresource/resource/icons8-scroll-up-96.png</normaloff>:/myresource/resource/icons8-scroll-up-96.png</iconset>
+               </property>
+               <property name="iconSize">
+                <size>
+                 <width>19</width>
+                 <height>19</height>
+                </size>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="8">
+              <widget class="QPushButton" name="movedown">
+<property name="toolTip"><string>Move the highlighted images down. Click an image, or Ctrl/Shift-click several. Tip: you can also drag images, or right-click for more options.</string></property>
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QToolButton{
+
+border: none;
+}</string>
+               </property>
+               <property name="text">
+                <string>Move down</string>
+               </property>
+               <property name="icon">
+                <iconset resource="resource.qrc">
+                 <normaloff>:/myresource/resource/icons8-scroll-down-96.png</normaloff>:/myresource/resource/icons8-scroll-down-96.png</iconset>
+               </property>
+               <property name="iconSize">
+                <size>
+                 <width>19</width>
+                 <height>19</height>
+                </size>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="9">
+              <widget class="QPushButton" name="duplicate">
+<property name="toolTip">
+ <string>Remove images that are in the list more than once</string>
+</property>
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="text">
+                <string>Remove duplicates</string>
+               </property>
+               <property name="icon">
+                <iconset resource="resource.qrc">
+                 <normaloff>:/myresource/resource/icons8-remove-delivery-96.png</normaloff>:/myresource/resource/icons8-remove-delivery-96.png</iconset>
+               </property>
+               <property name="iconSize">
+                <size>
+                 <width>19</width>
+                 <height>19</height>
+                </size>
+               </property>
+              </widget>
+             </item>
+             <item row="2" column="9">
+              <widget class="QPushButton" name="hide_image">
+<property name="toolTip">
+ <string>Show or hide the small pictures in the list</string>
+</property>
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="text">
+                <string>Hide thumbnails</string>
+               </property>
+               <property name="icon">
+                <iconset resource="resource.qrc">
+                 <normaloff>:/myresource/resource/icons8-image-90.png</normaloff>:/myresource/resource/icons8-image-90.png</iconset>
+               </property>
+               <property name="iconSize">
+                <size>
+                 <width>19</width>
+                 <height>19</height>
+                </size>
+               </property>
+              </widget>
+             </item>
+             <item row="2" column="8">
+              <widget class="QPushButton" name="change">
+<property name="toolTip">
+ <string>Choose the folder where your PDFs are saved</string>
+</property>
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="text">
+                <string>Save to...</string>
+               </property>
+               <property name="icon">
+                <iconset resource="resource.qrc">
+                 <normaloff>:/myresource/resource/icons8-export-52.png</normaloff>:/myresource/resource/icons8-export-52.png</iconset>
+               </property>
+               <property name="iconSize">
+                <size>
+                 <width>18</width>
+                 <height>18</height>
+                </size>
+               </property>
+              </widget>
+             </item>
+             <item row="2" column="0" colspan="3">
+              <widget class="QComboBox" name="sort">
+               <property name="toolTip">
+                <string>Sort the images. "Date taken" is when the photo was taken; for images without that date, such as screenshots, the date the file was last changed is used.</string>
+               </property>
+               <item>
+                <property name="text">
+                 <string>Sort by</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>Name: A to Z</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>Name: Z to A</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>Modified: oldest</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>Modified: newest</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>Size: smallest</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>Size: largest</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>Date taken: oldest</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>Date taken: newest</string>
+                </property>
+               </item>
+              </widget>
+             </item>
+             <item row="2" column="3" colspan="5">
+              <widget class="QLineEdit" name="output_path">
+<property name="toolTip">
+ <string>Your PDFs are saved in this folder</string>
+</property>
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="readOnly">
+                <bool>true</bool>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="verticalLayoutWidget_4">
+       <layout class="QVBoxLayout" name="verticalLayout_11">
+        <item>
+         <widget class="QGraphicsView" name="graphicsView">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="verticalScrollBarPolicy">
+           <enum>Qt::ScrollBarAlwaysOff</enum>
+          </property>
+          <property name="horizontalScrollBarPolicy">
+           <enum>Qt::ScrollBarAlwaysOff</enum>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="image">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+          <property name="wordWrap">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_2">
+          <item>
+           <widget class="QToolButton" name="select_item">
+<property name="toolTip">
+ <string>Tick or untick this image</string>
+</property>
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="text">
+             <string>Tick</string>
+            </property>
+            <property name="icon">
+             <iconset resource="resource.qrc">
+              <normaloff>:/myresource/resource/icons8-double-tick-100.png</normaloff>:/myresource/resource/icons8-double-tick-100.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>25</width>
+              <height>25</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QToolButton" name="preview_2">
+<property name="toolTip">
+ <string>Open this image in your image viewer</string>
+</property>
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="text">
+             <string>Open</string>
+            </property>
+            <property name="icon">
+             <iconset resource="resource.qrc">
+              <normaloff>:/myresource/resource/icons8-show-property-96.png</normaloff>:/myresource/resource/icons8-show-property-96.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>25</width>
+              <height>25</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QToolButton" name="zoomin">
+<property name="toolTip">
+ <string>Zoom in</string>
+</property>
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="text">
+             <string>Zoom In</string>
+            </property>
+            <property name="icon">
+             <iconset resource="resource.qrc">
+              <normaloff>:/myresource/resource/icons8-zoom-in-52.png</normaloff>:/myresource/resource/icons8-zoom-in-52.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>25</width>
+              <height>25</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QToolButton" name="zoomout">
+<property name="toolTip">
+ <string>Zoom out</string>
+</property>
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="text">
+             <string>Zoom out</string>
+            </property>
+            <property name="icon">
+             <iconset resource="resource.qrc">
+              <normaloff>:/myresource/resource/icons8-zoom-out-52.png</normaloff>:/myresource/resource/icons8-zoom-out-52.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>25</width>
+              <height>25</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+          <item>
+ <widget class="QToolButton" name="rotate_left">
+  <property name="toolTip">
+   <string>Turn this image to the left (also in the PDF). Turns all highlighted images when several are highlighted.</string>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="text">
+   <string>Rotate left</string>
+  </property>
+  <property name="iconSize">
+   <size>
+    <width>25</width>
+    <height>25</height>
+   </size>
+  </property>
+ </widget>
+</item>
+<item>
+           <widget class="QToolButton" name="rotate">
+<property name="toolTip">
+ <string>Turn this image to the right (also in the PDF). Turns all highlighted images when several are highlighted.</string>
+</property>
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="text">
+             <string>Rotate right</string>
+            </property>
+            <property name="icon">
+             <iconset resource="resource.qrc">
+              <normaloff>:/myresource/resource/icons8-rotate-96.png</normaloff>:/myresource/resource/icons8-rotate-96.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>25</width>
+              <height>25</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+<item>
+ <widget class="QToolButton" name="crop">
+  <property name="toolTip">
+   <string>Cut away the parts of this image you don't want in the PDF</string>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="text">
+   <string>Crop</string>
+  </property>
+  <property name="iconSize">
+   <size>
+    <width>25</width>
+    <height>25</height>
+   </size>
+  </property>
+ </widget>
+</item>
+
+          <item>
+           <widget class="QToolButton" name="remove_2">
+<property name="toolTip">
+ <string>Remove this image from the list</string>
+</property>
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="text">
+             <string>Remove</string>
+            </property>
+            <property name="icon">
+             <iconset resource="resource.qrc">
+              <normaloff>:/myresource/resource/icons8-multiply-96.png</normaloff>:/myresource/resource/icons8-multiply-96.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>25</width>
+              <height>25</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_3">
+          <item>
+           <widget class="QPushButton" name="prev">
+<property name="toolTip">
+ <string>Show the previous image</string>
+</property>
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="text">
+             <string>Previous</string>
+            </property>
+            <property name="icon">
+             <iconset resource="resource.qrc">
+              <normaloff>:/myresource/resource/icons8-go-back-90.png</normaloff>:/myresource/resource/icons8-go-back-90.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>22</width>
+              <height>22</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="next">
+<property name="toolTip">
+ <string>Show the next image</string>
+</property>
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="text">
+             <string>Next</string>
+            </property>
+            <property name="icon">
+             <iconset resource="resource.qrc">
+              <normaloff>:/myresource/resource/icons8-forward-button-90.png</normaloff>:/myresource/resource/icons8-forward-button-90.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>22</width>
+              <height>22</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <widget class="QGroupBox" name="groupBox_5">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="title">
+           <string>   PDF DETAILS</string>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_12">
+           <item>
+            <layout class="QGridLayout" name="gridLayout_24">
+             <item row="3" column="1">
+              <widget class="QCheckBox" name="checkBox_protect_pdf">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="toolTip">
+                <string>Ask for a password when the PDF is opened</string>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QCheckBox::indicator { width: 20px;height:20px };</string>
+               </property>
+               <property name="text">
+                <string/>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="0">
+              <widget class="QLabel" name="label_20">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="text">
+                <string>Subject</string>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="0">
+              <widget class="QLabel" name="label_17">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="text">
+                <string>Title</string>
+               </property>
+              </widget>
+             </item>
+             <item row="2" column="0">
+              <widget class="QLabel" name="label_19">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="text">
+                <string>Author</string>
+               </property>
+              </widget>
+             </item>
+             <item row="3" column="0">
+              <widget class="QLabel" name="pdf_protect_indicator">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="text">
+                <string>Password (off)</string>
+               </property>
+              </widget>
+             </item>
+             <item row="3" column="2">
+              <widget class="QLineEdit" name="protect_pdf">
+               <property name="enabled">
+                <bool>true</bool>
+               </property>
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="cursor">
+                <cursorShape>IBeamCursor</cursorShape>
+               </property>
+               <property name="text">
+                <string/>
+               </property>
+               <property name="placeholderText">
+                <string>Password</string>
+               </property>
+              </widget>
+             </item>
+             <item row="2" column="1" colspan="2">
+              <widget class="QLineEdit" name="author">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="text">
+                <string/>
+               </property>
+               <property name="placeholderText">
+                <string>Your name</string>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="1" colspan="2">
+              <widget class="QLineEdit" name="subject">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="text">
+                <string/>
+               </property>
+               <property name="placeholderText">
+                <string>What it's about</string>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="1" colspan="2">
+              <widget class="QLineEdit" name="title">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="text">
+                <string/>
+               </property>
+               <property name="placeholderText">
+                <string>PDF title</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="QGroupBox" name="groupBox_6">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="title">
+           <string>   PDF SETTINGS</string>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_15">
+           <item>
+            <layout class="QGridLayout" name="gridLayout_27">
+             <item row="0" column="1" colspan="2">
+              <widget class="QLineEdit" name="pdf_name">
+               <property name="text">
+                <string/>
+               </property>
+               <property name="placeholderText">
+                <string>PDF file name</string>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="0">
+              <widget class="QLabel" name="label_27">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="text">
+                <string>Orientation</string>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="0">
+              <widget class="QLabel" name="label">
+               <property name="text">
+                <string>File name</string>
+               </property>
+              </widget>
+             </item>
+             <item row="3" column="0" colspan="2">
+              <widget class="QPushButton" name="more_setting_button">
+               <property name="text">
+                <string>Advanced PDF settings</string>
+               </property>
+               <property name="icon">
+                <iconset resource="resource.qrc">
+                 <normaloff>:/myresource/resource/icons8-settings-96.png</normaloff>:/myresource/resource/icons8-settings-96.png</iconset>
+               </property>
+               <property name="iconSize">
+                <size>
+                 <width>22</width>
+                 <height>22</height>
+                </size>
+               </property>
+              </widget>
+             </item>
+<item row="4" column="0" colspan="3">
+ <widget class="QPushButton" name="preview_pdf">
+  <property name="toolTip">
+   <string>Make a quick PDF of the first 10 images and open it, without saving it</string>
+  </property>
+  <property name="text">
+   <string>Preview PDF</string>
+  </property>
+  <property name="icon">
+   <iconset resource="resource.qrc">
+    <normaloff>:/myresource/resource/icons8-file-preview-96.png</normaloff>
+    :/myresource/resource/icons8-file-preview-96.png
+   </iconset>
+  </property>
+  <property name="iconSize">
+   <size>
+    <width>20</width>
+    <height>20</height>
+   </size>
+  </property>
+ </widget>
+</item>
+
+             <item row="2" column="1" colspan="2">
+              <widget class="QComboBox" name="page_format">
+<property name="toolTip">
+ <string>Auto makes each page the same size as its image</string>
+</property>
+               <item>
+                <property name="text">
+                 <string>Auto (same as image)</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>A3</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>A4</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>A5</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>Letter</string>
+                </property>
+               </item>
+<item>
+ <property name="text">
+  <string>Legal</string>
+ </property>
+</item>
+<item>
+ <property name="text">
+  <string>Custom size</string>
+ </property>
+</item>
+               <item>
+                <property name="text">
+                 <string>A3 (stretch to fill)</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>A4 (stretch to fill)</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>A5 (stretch to fill)</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>Letter (stretch to fill)</string>
+                </property>
+               </item>
+<item>
+ <property name="text">
+  <string>Legal (stretch to fill)</string>
+ </property>
+</item>
+<item>
+ <property name="text">
+  <string>Custom size (stretch to fill)</string>
+ </property>
+</item>
+</widget>
+             </item>
+             <item row="3" column="2">
+              <widget class="QToolButton" name="info_main">
+               <property name="toolTip">
+                <string>Help with orientation and page size</string>
+               </property>
+               <property name="text">
+                <string/>
+               </property>
+               <property name="icon">
+                <iconset resource="resource.qrc">
+                 <normaloff>:/myresource/resource/icons8-info-104.png</normaloff>:/myresource/resource/icons8-info-104.png</iconset>
+               </property>
+               <property name="iconSize">
+                <size>
+                 <width>23</width>
+                 <height>23</height>
+                </size>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="1" colspan="2">
+              <widget class="QComboBox" name="orientation">
+<property name="toolTip">
+ <string>Auto turns each page to match its image</string>
+</property>
+               <item>
+                <property name="text">
+                 <string>Auto</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>Portrait (tall)</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>Landscape (wide)</string>
+                </property>
+               </item>
+              </widget>
+             </item>
+             <item row="2" column="0">
+              <widget class="QLabel" name="label28">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="text">
+                <string>Page size</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QToolBar" name="toolBar">
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>55</width>
+     <height>30</height>
+    </size>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionAdd_image"/>
+   <addaction name="actionAdd_folder"/>
+   <addaction name="actionRemove_Selected"/>
+   <addaction name="actionClear_all"/>
+   <addaction name="actionSettings"/>
+   <addaction name="actionDonate"/>
+   <addaction name="actionAbout"/>
+  </widget>
+  <action name="actionAdd_image">
+   <property name="icon">
+    <iconset resource="resource.qrc">
+     <normaloff>:/myresource/resource/icons8-add-image-96.png</normaloff>:/myresource/resource/icons8-add-image-96.png</iconset>
+   </property>
+   <property name="text">
+    <string>Add images</string>
+   </property>
+  </action>
+  <action name="actionAdd_folder">
+   <property name="icon">
+    <iconset resource="resource.qrc">
+     <normaloff>:/myresource/resource/icons8-add-folder-96.png</normaloff>:/myresource/resource/icons8-add-folder-96.png</iconset>
+   </property>
+   <property name="text">
+    <string>Add a folder of images</string>
+   </property>
+  </action>
+  <action name="actionClear_all">
+   <property name="icon">
+    <iconset resource="resource.qrc">
+     <normaloff>:/myresource/resource/icons8-delete-bin-96.png</normaloff>:/myresource/resource/icons8-delete-bin-96.png</iconset>
+   </property>
+   <property name="text">
+    <string>Clear the list</string>
+   </property>
+  </action>
+  <action name="actionRemove_Selected">
+   <property name="icon">
+    <iconset resource="resource.qrc">
+     <normaloff>:/myresource/resource/icons8-multiply-52.png</normaloff>:/myresource/resource/icons8-multiply-52.png</iconset>
+   </property>
+   <property name="text">
+    <string>Remove ticked images</string>
+   </property>
+  </action>
+  <action name="actionSettings">
+   <property name="icon">
+    <iconset resource="resource.qrc">
+     <normaloff>:/myresource/resource/icons8-settings-96.png</normaloff>:/myresource/resource/icons8-settings-96.png</iconset>
+   </property>
+   <property name="text">
+    <string>App settings</string>
+   </property>
+  </action>
+  <action name="actionAbout">
+   <property name="icon">
+    <iconset resource="resource.qrc">
+     <normaloff>:/myresource/resource/icons8-info-104.png</normaloff>:/myresource/resource/icons8-info-104.png</iconset>
+   </property>
+   <property name="text">
+    <string>About</string>
+   </property>
+  </action>
+  <action name="actionDonate">
+   <property name="icon">
+    <iconset resource="resource.qrc">
+     <normaloff>:/myresource/resource/icons8-paypal-144.png</normaloff>:/myresource/resource/icons8-paypal-144.png</iconset>
+   </property>
+   <property name="text">
+    <string>Donate</string>
+   </property>
+   <property name="toolTip">
+    <string>Support the developer</string>
+   </property>
+  </action>
+ </widget>
+ <resources>
+  <include location="light.qrc"/>
+  <include location="resource.qrc"/>
+  <include location="dark.qrc"/>
+ </resources>
+ <connections/>
+</ui>
