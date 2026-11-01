@@ -1,8 +1,8 @@
 # JPG2PDF for Linux
 
-A desktop application for converting JPG/JPEG images into PDF files.
+A Linux packaging and release project for **JPG2PDF**, a desktop application that converts JPG/JPEG images into PDF files.
 
-This repository contains Linux packaging and release resources for JPG2PDF, including an AppImage build script.
+The application is based on the upstream project: [rishabh3354/JPG2PDF](https://github.com/rishabh3354/JPG2PDF). This repository adds Linux-focused AppImage packaging and release resources. Upstream attribution and its MIT license are retained.
 
 ## Current packaging
 
@@ -59,6 +59,6 @@ Download published AppImage builds from the repository's **Releases** page. Larg
 
 Bug reports and improvements are welcome. Please include your Linux distribution, architecture, and relevant error output when reporting packaging issues.
 
-## License
+## License and attribution
 
-The upstream application's license and required attribution must be preserved. This packaging repository does not change the license of the upstream project.
+This project retains the upstream application's MIT license and copyright notice. See [LICENSE](LICENSE) for the applicable terms and attribution.
