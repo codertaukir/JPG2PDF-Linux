@@ -9,17 +9,29 @@ APPIMAGETOOL="$HOME/Downloads/appimagetool-x86_64.AppImage"
 
 echo "=== JPG2PDF AppImage Builder ==="
 
-for path in "$VENV/bin/activate" "$APPIMAGETOOL" "$ROOT/src/jpg2pdf.py" "$ROOT/req.txt"; do
+for path in "$APPIMAGETOOL" "$ROOT/src/jpg2pdf.py" "$ROOT/req.txt"; do
     [[ -e "$path" ]] || {
         echo "ERROR: Missing $path"
         exit 1
     }
 done
 
+command -v python3 >/dev/null 2>&1 || {
+    echo "ERROR: python3 is required"
+    exit 1
+}
+
 mkdir -p "$OUT"
+
+# Create an isolated environment on the first build.
+if [[ ! -x "$VENV/bin/python" ]]; then
+    python3 -m venv "$VENV"
+fi
+
 # shellcheck disable=SC1091
 source "$VENV/bin/activate"
 
+python -m pip install --upgrade pip
 python -m pip install -r "$ROOT/req.txt" PyInstaller PyQt5
 python -c "from PyQt5 import QtCore, QtGui, QtWidgets; from PIL import Image; import pikepdf"
 
